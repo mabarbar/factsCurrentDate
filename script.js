@@ -22,10 +22,10 @@ const factNumber = Math.floor(Math.random() * facts.length);
 const date = new Date();
 
 const refresh = () => {
-	const factNumber = Math.floor(Math.random() * facts.length);
-	funFact.textContent = facts[factNumber]
-}
+  const factNumber = Math.floor(Math.random() * facts.length);
+  funFact.textContent = facts[factNumber];
+};
 
 currentDay.textContent = date.toLocaleString("en", { weekday: "long" });
-funFact.textContent = facts[factNumber];
-refreshBtn.addEventListener("click", refresh)
+refresh();
+refreshBtn.addEventListener("click", refresh);
