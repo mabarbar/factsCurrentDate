@@ -18,14 +18,14 @@ const facts = [
   "There are 293 ways to make change for a dollar.",
 ];
 
-const factNumber = Math.floor(Math.random() * facts.length);
+refreshBtn.addEventListener("click", refresh);
+
 const date = new Date();
+currentDay.textContent = date.toLocaleString("en", { weekday: "long" });
 
 const refresh = () => {
   const factNumber = Math.floor(Math.random() * facts.length);
   funFact.textContent = facts[factNumber];
 };
 
-currentDay.textContent = date.toLocaleString("en", { weekday: "long" });
 refresh();
-refreshBtn.addEventListener("click", refresh);
